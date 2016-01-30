@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="myPrimaryColor">#a4353e</color>
+    <color name="navigationBarColor">#a4353e</color>
+    <color name="myWindowBackground">#ff5b61</color>
+    <color name="myPrimaryDarkColor">#ff5b61</color>
+    <color name="myAccentColor">#ff5b61</color>
+    <color name="myTextPrimaryColor">#ffffff</color>
+
+    <color name="text_white">#FFFFFF</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <array name="in_colors">
+        <item>#ff5b61</item>
+    </array>
+
+
+    ////////////////////////////////////////////
+
+    <color name="mylightColor">#ff5b61</color>
+    <color name="mydarkColor">#ff5b61</color>
+    <color name="mydarkColor_new">#42a3ff</color>
+
+
+</resources>

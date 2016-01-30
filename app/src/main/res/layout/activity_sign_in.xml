@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:cocoapay="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <com.firebug.scootr.Views.MyTextView
+            app:edittextfont="NEXA LIGHT.OTF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:text="SCOOTR"
+            android:textColor="#ffffff"
+            android:textSize="30dp" />
+
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/back1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/back_button"/>
+
+    </RelativeLayout>
+    <com.firebug.scootr.Views.CustomEditText
+        android:layout_marginTop="45dp"
+        android:textCursorDrawable="@drawable/curson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textColorHint="#ffffff"
+        android:inputType="textEmailAddress"
+        android:textColor="#ffffff"
+        android:layout_marginLeft="5dp"
+        app:et_labelTextColor="#ffffff"
+        style="@style/Material.Widget.EditText.Light"
+        app:et_supportMode="none"
+        app:et_dividerColor="@android:color/transparent"
+        android:layout_marginRight="5dp"
+        android:hint="Email Address"
+        cocoapay:edittextfont="NEXA LIGHT.OTF"
+        cocoapay:edittextfontHint="NEXA LIGHT.OTF"
+        android:background="@drawable/edit_bottom_stroke"
+        android:id="@+id/email" />
+
+    <com.firebug.scootr.Views.CustomEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:hint="Password"
+        android:textColorHint="#ffffff"
+        android:textColor="#ffffff"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:inputType="textPassword"
+        app:et_labelTextColor="#ffffff"
+        style="@style/Material.Widget.EditText.Light"
+        app:et_supportMode="none"
+        app:et_dividerColor="@android:color/transparent"
+        android:textCursorDrawable="@drawable/curson"
+        android:background="@drawable/edit_bottom_stroke"
+        android:id="@+id/password"
+        cocoapay:edittextfont="NEXA LIGHT.OTF"
+        cocoapay:edittextfontHint="NEXA LIGHT.OTF"
+        android:layout_gravity="center_horizontal" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#ffffff">
+
+            <com.firebug.scootr.Views.MyTextView
+                app:edittextfont="NEXA LIGHT.OTF"
+                android:id="@+id/btn_sign_in"
+                style="@style/FlatWaveColorButtonRippleStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:background="#ff5b61"
+                android:gravity="center"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:text="Sign In"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ffffff"
+                app:rd_delayClick="afterRelease" />
+        </RelativeLayout>
+
+        <com.firebug.scootr.Views.MyTextView
+            android:id="@+id/btn_sign_up"
+            style="@style/FlatWaveColorButtonRippleStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="30dp"
+            android:background="#ff0094ff"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="Sign Up"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ffffff"
+            android:visibility="gone"
+            app:rd_delayClick="afterRelease" />
+
+        <com.rey.material.widget.ProgressView
+            android:id="@+id/progress_pv_circular_inout"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            app:pv_autostart="false"
+            app:pv_circular="true"
+            app:pv_progressMode="indeterminate"
+            app:pv_progressStyle="@style/InOutCircularProgressDrawableStyle"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
