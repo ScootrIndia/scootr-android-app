@@ -34,7 +34,7 @@
             app:edittextfont="NEXA LIGHT.OTF"
             android:layout_margin="10dp"
             android:layout_centerHorizontal="true"
-            android:text="Pranav Manpuri"
+            android:text="Pranav Manpuria"
             android:textColor="@color/text_white" />
 
         <ImageView
@@ -65,7 +65,6 @@
             android:src="@drawable/history" />
 
         <com.firebug.scootr.Views.MyTextView
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -73,6 +72,7 @@
             app:edittextfont="NEXA LIGHT.OTF"
             android:textColor="#AAAAAA"
             android:textSize="20sp" />
+
     </LinearLayout>
 
 
@@ -121,8 +121,6 @@
         android:background="#FF5A60"
         android:orientation="horizontal"
        >
-
-
 
         <com.firebug.scootr.Views.MyTextView
             android:id="@+id/textView4"

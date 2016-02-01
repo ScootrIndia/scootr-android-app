@@ -33,10 +33,11 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
+            android:layout_alignLeft="@+id/view"
+            android:layout_alignStart="@+id/view"
             android:layout_below="@+id/view"
             android:gravity="center_vertical"
-            android:layout_margin="10dp"
+            android:paddingTop="10sp"
             android:text="Pranav Manpuri"
             android:textColor="@color/text_white" />
 
@@ -69,12 +70,12 @@
             android:src="@drawable/history" />
 
         <com.firebug.scootr.Views.MyTextView
-            android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/nameTv"
             android:layout_marginLeft="20dp"
             android:layout_toRightOf="@+id/homeIcon"
+            android:paddingTop="2dp"
             android:text="Order History"
             android:textColor="#AAAAAA"
             android:textSize="20sp" />

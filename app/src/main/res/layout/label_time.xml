@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="190dp"
+    android:layout_height="45dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/timer"
+
+    android:layout_gravity="center_horizontal">
+
+    <com.firebug.scootr.Views.MyTextView
+        app:edittextfont="NEXA LIGHT.OTF"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:text="Arriving in"
+        android:textColor="#ffffff"
+        android:id="@+id/tvArriving" />
+
+    <com.firebug.scootr.Views.MyTextView
+        app:edittextfont="NEXA LIGHT.OTF"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="14 Minutes"
+        android:layout_alignParentBottom="true"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        />
+</RelativeLayout>
