@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/transparent"
+    android:background="#567345"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
@@ -22,11 +22,12 @@
         android:layout_centerHorizontal="true" />
 
     <com.firebug.scootr.Views.MyTextView
+        app:edittextfont="NEXA LIGHT.OTF"
+
         android:layout_marginBottom="20dp"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        app:edittextfont="NEXA LIGHT.OTF"
         android:id="@+id/signUpTv"
         android:text="End Delivery"
         android:layout_marginTop="20dp"

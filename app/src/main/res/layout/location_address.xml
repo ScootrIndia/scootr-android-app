@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="#fff">
+    android:background="@android:color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
 
-    <TextView
+    <com.firebug.scootr.Views.MyTextView
+        app:edittextfont="NEXA LIGHT.OTF"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="70"
@@ -34,7 +38,9 @@
             android:layout_alignParentBottom="true"
             android:layout_margin="10dp"
             />
-        <TextView
+        <com.firebug.scootr.Views.MyTextView
+            app:edittextfont="NEXA LIGHT.OTF"
+
             android:id="@+id/addressSource"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -85,7 +91,9 @@
             android:layout_alignParentBottom="true"
             android:layout_margin="10dp"
              />
-        <TextView
+        <com.firebug.scootr.Views.MyTextView
+            app:edittextfont="NEXA LIGHT.OTF"
+
             android:id="@+id/addressDestination"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -107,7 +115,9 @@
         android:background="#444444"
         android:orientation="horizontal"
         >
-        <TextView
+        <com.firebug.scootr.Views.MyTextView
+            app:edittextfont="NEXA LIGHT.OTF"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cancel"
@@ -124,7 +134,9 @@
             android:background="#ffffff"
 
             />
-        <TextView
+        <com.firebug.scootr.Views.MyTextView
+            app:edittextfont="NEXA LIGHT.OTF"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Confirm"

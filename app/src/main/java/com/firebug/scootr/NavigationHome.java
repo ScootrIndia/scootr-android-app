@@ -14,14 +14,6 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.firebug.scootr.Views.MyTextView;
-import com.google.android.gms.maps.CameraUpdate;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
-import com.google.android.gms.maps.model.MarkerOptions;
 
 public class NavigationHome extends AppCompatActivity implements View.OnClickListener{
 
@@ -48,25 +40,6 @@ public class NavigationHome extends AppCompatActivity implements View.OnClickLis
         ((LinearLayout)findViewById(R.id.support_layout)).setOnClickListener(this);
         ((RelativeLayout)findViewById(R.id.go_offline_layout)).setOnClickListener(this);
         ((MyTextView)findViewById(R.id.go_online)).setOnClickListener(this);
-
-
-        GoogleMap googleMap;
-        googleMap = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
-
-        final LatLng TutorialsPoint = new LatLng(22.7585 , 75.8912);
-        googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-        googleMap.addMarker(new MarkerOptions().position(TutorialsPoint).title("TutorialsPoint")).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.scootr_map));
-        googleMap.getUiSettings().setZoomGesturesEnabled(true);
-
-
-        CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(TutorialsPoint, 10); googleMap.animateCamera(cameraUpdate);
-
-
-
-//        googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-//        googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-//        googleMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
-//        googleMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
 
     }
 
