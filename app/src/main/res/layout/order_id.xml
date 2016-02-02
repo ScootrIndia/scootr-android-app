@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="#fff"
+
+     >
+    <TextView
+        android:id="@+id/orderTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order ID: V91LY10"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" 
+        android:layout_margin="9dp"
+        android:textSize="16sp"/>
+    
+    <ImageView
+        android:id="@+id/imgId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/info"
+        android:layout_alignParentRight="true"
+        android:layout_margin="7dp"
+        />
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/firstLL"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/orderTv"
+        android:layout_margin="9dp">
+    <ImageView
+        android:id="@+id/settingImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       
+        android:src="@drawable/settlin"
+        android:layout_gravity="center_vertical"
+        
+         />
+    
+    <TextView
+        android:id="@+id/rsTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rs 145"
+        android:layout_marginLeft="7dp"
+        
+        android:layout_gravity="center_vertical"        
+        />
+    
+    </LinearLayout>
+
+</RelativeLayout>

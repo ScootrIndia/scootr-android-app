@@ -3,10 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bill">
+    >
 
-
-    <com.firebug.scootr.Views.MyTextView
+    <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,7 +16,7 @@
         android:textColor="#000000"
         android:textSize="35dp"
         android:textStyle="bold"
-        app:edittextfont="NEXA LIGHT.OTF" />
+         />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -29,7 +28,7 @@
         android:background="#444444"
         android:paddingTop="10dp" />
 
-    <com.firebug.scootr.Views.MyTextView
+    <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -39,9 +38,9 @@
         android:text="86"
         android:textColor="#00B100"
         android:textSize="45dp"
-        app:edittextfont="NEXA LIGHT.OTF" />
+         />
 
-    <com.firebug.scootr.Views.MyTextView
+    <TextView
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -52,9 +51,9 @@
         android:text="Distance Travelled :"
         android:textColor="#000000"
         android:textSize="16dp"
-        app:edittextfont="NEXA LIGHT.OTF" />
+         />
 
-    <com.firebug.scootr.Views.MyTextView
+    <TextView
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -64,9 +63,9 @@
         android:text="4.8 KM"
         android:textColor="#000000"
         android:textSize="16dp"
-        app:edittextfont="NEXA LIGHT.OTF" />
+        />
 
-    <com.firebug.scootr.Views.MyTextView
+    <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -77,9 +76,9 @@
         android:text="Duration :"
         android:textColor="#000000"
         android:textSize="16dp"
-        app:edittextfont="NEXA LIGHT.OTF" />
+         />
 
-    <com.firebug.scootr.Views.MyTextView
+    <TextView
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -89,7 +88,7 @@
         android:text="12 Minutes 28 Seconds"
         android:textColor="#000000"
         android:textSize="16dp"
-        app:edittextfont="NEXA LIGHT.OTF" />
+         />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -130,7 +129,7 @@
         android:layout_toRightOf="@+id/textView12"
         android:layout_toEndOf="@+id/textView12" />
 
-    <com.firebug.scootr.Views.MyTextView
+    <TextView
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -139,11 +138,11 @@
         android:layout_toLeftOf="@+id/imageView7"
         android:layout_toStartOf="@+id/imageView7"
         android:text="Start"
-        app:edittextfont="NEXA LIGHT.OTF"
+
         android:textSize="20dp" />
 
-    <com.firebug.scootr.Views.MyTextView
-        app:edittextfont="NEXA LIGHT.OTF"
+    <TextView
+
         android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -155,7 +154,7 @@
 
         />
 
-    <com.firebug.scootr.Views.MyTextView
+    <TextView
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -165,26 +164,34 @@
         android:layout_alignLeft="@+id/imageView5"
         android:layout_alignStart="@+id/imageView5" />
 
-    <com.firebug.scootr.Views.MyTextView
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/atherate"
         android:id="@+id/textView21"
-        app:edittextfont="NEXA LIGHT.OTF"
+
         android:layout_below="@+id/textView19"
         android:layout_toRightOf="@+id/imageView7"
         android:layout_toEndOf="@+id/imageView7" />
 
-    <com.firebug.scootr.Views.MyTextView
-        android:layout_width="wrap_content"
+    <LinearLayout android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:text="562 Koramagla Main Road"
-        android:id="@+id/textView22"
-        app:edittextfont="NEXA LIGHT.OTF"
-        android:layout_below="@+id/textView20"
-        android:layout_alignRight="@+id/textView13"
-        android:layout_alignEnd="@+id/textView13" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="36dp">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="562, Koramangla Main Road \n 1st Block, Banglore - 560064 "
+            android:layout_marginLeft="7dp"
+            />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="423, Koramangla Main Road \n 3rd Block, Banglore - 560064 "
+            android:layout_marginLeft="7dp"
+            />
+
+    </LinearLayout>
 </RelativeLayout>

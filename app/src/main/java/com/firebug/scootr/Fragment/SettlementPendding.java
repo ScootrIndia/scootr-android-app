@@ -21,7 +21,9 @@ public class SettlementPendding extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        view = inflater.inflate(R.layout.fragment_settlement_pending, container, false);
+       // view = inflater.inflate(R.layout.fragment_settlement_pending, container, false);
+
+        view = inflater.inflate(R.layout.order_id, container, false);
         context = this.getActivity();
         init();
         return view;

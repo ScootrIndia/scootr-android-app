@@ -22,7 +22,7 @@ public class SettlementSettled extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        view = inflater.inflate(R.layout.fragment_settlement_settled, container, false);
+        view = inflater.inflate(R.layout.pending_order, container, false);
         context = this.getActivity();
         init();
         return view;
