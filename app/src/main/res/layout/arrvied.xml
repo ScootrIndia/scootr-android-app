@@ -2,7 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#567345"
+    android:visibility="gone"
+    android:id="@+id/arrived_layout"
+    android:background="@android:color/transparent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
@@ -22,11 +24,12 @@
         android:layout_centerHorizontal="true" />
 
     <com.firebug.scootr.Views.MyTextView
+
         android:layout_marginBottom="20dp"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:id="@+id/signUpTv"
+        android:id="@+id/rider_end_delivery"
         android:text="End Delivery"
         app:edittextfont="NEXA LIGHT.OTF"
         android:layout_marginTop="20dp"

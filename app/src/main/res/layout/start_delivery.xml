@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#567345"
+    android:background="@android:color/transparent"
+    android:visibility="gone"
+    android:id="@+id/start_ride_layout"
     android:orientation="vertical">
 
     <include
@@ -26,7 +28,7 @@
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:id="@+id/signUpTv"
+        android:id="@+id/state_ride"
         android:text="Start Delivery"
         app:edittextfont="NEXA LIGHT.OTF"
         android:layout_marginTop="20dp"
