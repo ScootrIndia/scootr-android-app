@@ -2,7 +2,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:visibility="visible"
+=======
+    android:visibility="gone"
+>>>>>>> bec269e0751e446bc61478725c8214a2a32a4d0c
     android:id="@+id/arrived_layout"
     android:background="@android:color/transparent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -31,7 +35,11 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:id="@+id/rider_end_delivery"
+<<<<<<< HEAD
         android:text="Arrived"
+=======
+        android:text="End Delivery"
+>>>>>>> bec269e0751e446bc61478725c8214a2a32a4d0c
         app:edittextfont="NEXA LIGHT.OTF"
         android:layout_marginTop="20dp"
         android:textColor="@color/text_white"

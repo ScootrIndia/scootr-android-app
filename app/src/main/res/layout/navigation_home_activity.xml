@@ -51,8 +51,12 @@
                 <include layout="@layout/arrvied"></include>
             <include layout="@layout/start_delivery"></include>
                 <include layout="@layout/end_delivery"></include>
+<<<<<<< HEAD
 
             <!--<include layout="@layout/summary"></include>-->
+=======
+            <include layout="@layout/summary"></include>
+>>>>>>> bec269e0751e446bc61478725c8214a2a32a4d0c
 
             </RelativeLayout>
 

@@ -40,5 +40,8 @@ dependencies {
     compile files('libs/httpmime-4.2.5.jar')
     compile files('libs/httpclient-4.2.5.jar')
     compile files('libs/httpcore-4.3.jar')
+<<<<<<< HEAD
 
+=======
+>>>>>>> bec269e0751e446bc61478725c8214a2a32a4d0c
 }

@@ -101,6 +101,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                 else if (!emailValidator(email))
                     showErrorMsg(" Invalid email address");
                 else {
+<<<<<<< HEAD
 
                     if (Utility.isConnectingToInternet(appContext))
 
@@ -113,6 +114,15 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
         }
 
+=======
+                    if (Utility.isConnectingToInternet(appContext))
+                        new SignIn().execute(email, password);
+                    else
+                        showErrorMsg("Please check your internet connection");
+                }
+                break;
+        }
+>>>>>>> bec269e0751e446bc61478725c8214a2a32a4d0c
     }
 
 
@@ -140,6 +150,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
             String result = null;
             String url = null;
+<<<<<<< HEAD
 
             url = Constant.BASE_URL_RIDE + "sign_in?";
 
@@ -154,6 +165,22 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                 HttpResponse httpResponse = httpClient.execute(request);
                 code = httpResponse.getStatusLine().getStatusCode();
 
+=======
+
+            url = Constant.BASE_URL_RIDE + "sign_in?";
+
+
+            try {
+                ArrayList<NameValuePair>params1 = new ArrayList<NameValuePair>();
+                params1.add(new BasicNameValuePair("email",params[0]));
+                params1.add(new BasicNameValuePair("password",params[1]));
+                HttpClient httpClient = new DefaultHttpClient();
+                HttpPost request = new HttpPost(url.replace("?",""));
+                request.setEntity(new UrlEncodedFormEntity(params1));
+                HttpResponse httpResponse = httpClient.execute(request);
+                code = httpResponse.getStatusLine().getStatusCode();
+
+>>>>>>> bec269e0751e446bc61478725c8214a2a32a4d0c
                 InputStream is = httpResponse.getEntity().getContent();
                 BufferedReader reader = new BufferedReader(new InputStreamReader(is, "iso-8859-1"), 8);
                 StringBuilder sb = new StringBuilder();
@@ -161,6 +188,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                 while ((line = reader.readLine()) != null) {
                     sb.append(line + "\n");
                 }
+<<<<<<< HEAD
 
                 is.close();
                 result = sb.toString();
@@ -302,6 +330,149 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                 DialogMessage.showPopupMessage("Please check your internet connection", appContext);
 //                Toast.makeText(appContext, "Please check your internet connection", Toast.LENGTH_LONG).show();
             }
+=======
+
+                is.close();
+                result = sb.toString();
+                Log.d("value of response is :",""+result);
+                //get all headers
+                Header[] headers = httpResponse.getAllHeaders();
+                for (Header header : headers) {
+                    System.out.println("Key : " + header.getName()
+                            + " ,Value : " + header.getValue());
+                    if(header.getName().equalsIgnoreCase("Access-Token"))
+                    {
+                        Log.d("key ",header.getValue());
+                        Utility.setSharedPreference(appContext, Constant.Access_Token, header.getValue().toString());
+                    }
+                    if(header.getName().equalsIgnoreCase("Client"))
+                    {
+                        Log.d("key ",header.getValue());
+                        Utility.setSharedPreference(appContext, Constant.Client, header.getValue().toString());
+                    }
+                    if(header.getName().equalsIgnoreCase("Expiry"))
+                    {
+                        Log.d("key ",header.getValue());
+                        Utility.setSharedPreference(appContext, Constant.Expiry, header.getValue().toString());
+                    }
+                    if(header.getName().equalsIgnoreCase("Token-Type"))
+                    {
+                        Log.d("key ",header.getValue());
+                        Utility.setSharedPreference(appContext, Constant.Token_Type, header.getValue().toString());
+                    }
+                    if(header.getName().equalsIgnoreCase("Uid"))
+                    {
+                        Log.d("key ",header.getValue());
+                        Utility.setSharedPreference(appContext, Constant.Uid, header.getValue().toString());
+                    }
+
+                }
+
+            }catch (Exception e ){
+
+            }
+
+
+      /*      RestClient client = new RestClient(url);
+            client.AddParam("email", params[0]);
+            client.AddParam("password", params[1]);
+            email=params[0];
+            try {
+
+                client.ExecutePost();
+                result = client.getResponse();
+                code = client.getResponseCode();
+
+                Log.e("code......", code + "");
+                Log.e("result......", result + "");
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }*/
+            return result;
+        }
+
+
+        @Override
+        protected void onPostExecute(String s) {
+
+//            ((ProgressView)findViewById(R.id.progress_pv_circular_inout)).stop();
+
+//            prgDialog.hide();
+
+//            if (prgDialog!=null)
+//                prgDialog.hide();
+
+            if (s!=null) {
+                try {
+
+
+                    JSONObject json = new JSONObject(s);
+
+                /*
+                                  {
+                  "data": {
+                    "id": 1,
+                    "provider": "email",
+                    "uid": "vaibhavsolanki444@gmail.com",
+                    "name": "vaibhav solanki",
+                    "nickname": null,
+                    "image": null,
+                    "email": "vaibhavsolanki444@gmail.com",
+                    "mobile_number": "9770069896",
+                    "city": "indore"
+                  }
+                }
+                */
+
+                    if (code == 401) {
+
+                        ((ProgressView)findViewById(R.id.progress_pv_circular_inout)).stop();
+                        showErrorMsg(json.getJSONArray("errors").get(0).toString());
+
+                    } else if(code==200){
+
+                        JSONObject data = json.getJSONObject("data");
+
+                        Utility.setSharedPreference(appContext, Constant.USER_ID, data.getString("id"));
+                        Utility.setSharedPreference(appContext, Constant.USER_PROVIDER, data.getString("provider"));
+                        Utility.setSharedPreference(appContext, Constant.USER_UID, data.getString("uid"));
+                        Utility.setSharedPreference(appContext, Constant.USER_NAME, data.getString("name"));
+                        Utility.setSharedPreference(appContext, Constant.USER_MOBILE, data.getString("mobile_number"));
+                        Utility.setSharedPreference(appContext, Constant.USER_EMAIL, data.getString("email"));
+                        Utility.setSharedPreference(appContext, Constant.USER_EMAIL, data.getString("city"));
+
+                        Utility.setSharedPreference(appContext, Constant.is_login, "yes");
+
+                                Intent  intent = new Intent(new Intent(appContext, NavigationHome.class));
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                startActivity(intent);
+
+                    }else{
+
+                        ((ProgressView)findViewById(R.id.progress_pv_circular_inout)).stop();
+                        showErrorMsg("Error "+code+ " please try again!");
+
+                    }
+
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+
+                    ((ProgressView)findViewById(R.id.progress_pv_circular_inout)).stop();
+                    DialogMessage.showPopupMessage("Please check your internet connection", appContext);
+//                    Toast.makeText(appContext, "Please check your internet connection", Toast.LENGTH_LONG).show();
+                }
+            } else {
+
+                ((ProgressView)findViewById(R.id.progress_pv_circular_inout)).stop();
+                DialogMessage.showPopupMessage("Please check your internet connection", appContext);
+//                Toast.makeText(appContext, "Please check your internet connection", Toast.LENGTH_LONG).show();
+            }
+>>>>>>> bec269e0751e446bc61478725c8214a2a32a4d0c
             super.onPostExecute(s);
         }
 

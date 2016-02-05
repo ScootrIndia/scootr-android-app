@@ -2,10 +2,16 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:visibility="gone"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:background="@drawable/bill"
     android:visibility="visible"
     android:id="@+id/summary_layout"
+=======
+    android:id="@+id/summary_layout"
+    android:background="@drawable/bill"
+>>>>>>> bec269e0751e446bc61478725c8214a2a32a4d0c
     >
 
     <TextView

@@ -18,6 +18,13 @@
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -62,6 +69,7 @@
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyBsV65eOULYxhmzO7OWcXSlM9XwpfN2NYE" />
 
+<<<<<<< HEAD
         <activity
             android:name=".SummaryPage"
             android:label="@string/title_activity_summary_page" >
@@ -74,6 +82,8 @@
             android:name=".EditProfileActivity"
             android:label="@string/title_activity_edit_profile" >
         </activity>
+=======
+>>>>>>> bec269e0751e446bc61478725c8214a2a32a4d0c
     </application>
 
 </manifest>

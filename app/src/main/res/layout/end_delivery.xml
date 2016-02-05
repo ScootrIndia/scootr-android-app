@@ -3,7 +3,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:visibility="visible"
+=======
+    android:visibility="gone"
+>>>>>>> bec269e0751e446bc61478725c8214a2a32a4d0c
     android:background="@android:color/transparent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/merchant_end_delivery_layout"

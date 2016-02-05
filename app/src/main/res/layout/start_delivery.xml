@@ -9,12 +9,19 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+<<<<<<< HEAD
     android:id="@+id/start_ride_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/transparent"
     android:orientation="vertical"
     android:visibility="visible">
+=======
+    android:background="@android:color/transparent"
+    android:visibility="gone"
+    android:id="@+id/start_ride_layout"
+    android:orientation="vertical">
+>>>>>>> bec269e0751e446bc61478725c8214a2a32a4d0c
 
     <include
         layout="@layout/address_alert"
@@ -35,8 +42,14 @@
         android:id="@+id/state_ride"
         android:layout_width="match_parent"
         android:layout_height="40dp"
+<<<<<<< HEAD
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20dp"
+=======
+        android:id="@+id/state_ride"
+        android:text="Start Delivery"
+        app:edittextfont="NEXA LIGHT.OTF"
+>>>>>>> bec269e0751e446bc61478725c8214a2a32a4d0c
         android:layout_marginTop="20dp"
         android:background="@drawable/outline_bg_white_dark"
         android:gravity="center"
