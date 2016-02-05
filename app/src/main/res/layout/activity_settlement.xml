@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-<include layout="@layout/tollbar_back"></include>
+    <include layout="@layout/tollbar_back"></include>
 
     <com.firebug.scootr.Layout.SlidingTabLayout
         android:id="@+id/tabs"
@@ -28,7 +28,6 @@
             android:layout_weight="1" />
 
     </LinearLayout>
-
 
 
 </LinearLayout>

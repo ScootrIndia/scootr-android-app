@@ -11,9 +11,12 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="atherate" formatted="false">.@;3:12 PM</string>
+    <string name="atherate" formatted="false">.@3:12 PM</string>
     <string name="action_example">Example action</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_scooter_navigation">ScooterNavigation</string>
     <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_summary_page">SummaryPage</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_edit_profile">EditProfileActivity</string>
 </resources>

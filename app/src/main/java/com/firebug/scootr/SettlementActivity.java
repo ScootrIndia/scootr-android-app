@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.firebug.scootr.Fragment.SettlementPendding;
 import com.firebug.scootr.Fragment.SettlementSettled;
@@ -21,7 +22,6 @@ import java.util.List;
  * Created by PremSai on 1/30/2016.
  */
 public class SettlementActivity extends AppCompatActivity{
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

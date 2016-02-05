@@ -34,7 +34,7 @@
         android:id="@+id/firstLL"
         android:layout_below="@+id/orderTv"
         android:layout_alignParentLeft="true"
-        android:layout_margin="9dp">
+        android:layout_marginLeft="7dp">
     <ImageView
         android:id="@+id/settingImg"
         android:layout_width="wrap_content"
@@ -53,8 +53,8 @@
         android:layout_height="wrap_content"
         android:text="Rs 145"
         android:layout_marginLeft="7dp"
-        
-        android:layout_gravity="center_vertical"        
+
+        android:layout_gravity="center_vertical"
         />
     
     </LinearLayout>

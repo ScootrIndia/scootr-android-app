@@ -1,10 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?><!--<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="8dp"
+
+    android:orientation="vertical"
+    android:visibility="visible">-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#567345"
-    android:orientation="vertical">
+    android:id="@+id/start_ride_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:visibility="visible">
 
     <include
         layout="@layout/address_alert"
@@ -12,29 +22,29 @@
         android:layout_height="110dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="90dp" />
+        android:layout_marginBottom="70dp" />
 
     <include
+        layout="@layout/label_time"
         android:layout_width="250dp"
         android:layout_height="40dp"
-        layout="@layout/label_time"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
 
     <com.firebug.scootr.Views.MyTextView
-        android:layout_marginBottom="20dp"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/state_ride"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:id="@+id/signUpTv"
-        android:text="Start Delivery"
-        app:edittextfont="NEXA LIGHT.OTF"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
         android:layout_marginTop="20dp"
-        android:textColor="@color/text_white"
-        android:gravity="center"
-        android:textSize="20sp"
         android:background="@drawable/outline_bg_white_dark"
-        />
+        android:gravity="center"
+        android:text="Start Delivery"
+        android:textColor="@color/text_white"
+        android:textSize="20sp"
+        app:edittextfont="NEXA LIGHT.OTF" />
 
 
-</RelativeLayout>
+</RelativeLayout><!--
+</android.support.v7.widget.CardView>-->

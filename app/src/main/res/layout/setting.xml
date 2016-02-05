@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:cocoapay="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg"
+    android:id="@+id/main_layout"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_above="@+id/bottom_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <com.firebug.scootr.Views.MyTextView
+                app:edittextfont="NEXA LIGHT.OTF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:text="Settings"
+                android:textColor="#ffffff"
+                android:textSize="30dp"
+                android:id="@+id/view2" />
+
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/back_button"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Profile"
+                android:id="@+id/edit_prfile"
+                android:layout_alignTop="@+id/menu"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.firebug.scootr.Views.CustomEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textCursorDrawable="@drawable/curson"
+                    android:padding="5dp"
+                    android:textColorHint="#ffffff"
+                    android:textColor="#ffffff"
+                    android:inputType="textCapSentences"
+                    android:layout_marginTop="45dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:hint="Full Name"
+                    app:et_labelTextColor="#ffffff"
+                    style="@style/Material.Widget.EditText.Light"
+                    app:et_supportMode="none"
+                    app:et_dividerColor="@android:color/transparent"
+                    cocoapay:edittextfont="NEXA LIGHT.OTF"
+                    cocoapay:edittextfontHint="NEXA LIGHT.OTF"
+                    android:background="@drawable/edit_bottom_stroke"
+                    android:id="@+id/full_name" />
+
+                <com.firebug.scootr.Views.CustomEditText
+                    android:textCursorDrawable="@drawable/curson"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColorHint="#ffffff"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    app:et_labelTextColor="#ffffff"
+                    style="@style/Material.Widget.EditText.Light"
+                    app:et_supportMode="none"
+                    app:et_dividerColor="@android:color/transparent"
+                    android:layout_marginRight="5dp"
+                    android:hint="Email Address"
+                    cocoapay:edittextfont="NEXA LIGHT.OTF"
+                    cocoapay:edittextfontHint="NEXA LIGHT.OTF"
+                    android:background="@drawable/edit_bottom_stroke"
+                    android:id="@+id/email" />
+
+                <com.firebug.scootr.Views.CustomEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="#ffffff"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="5dp"
+                    android:hint="Contact Number"
+                    app:et_labelTextColor="#ffffff"
+                    style="@style/Material.Widget.EditText.Light"
+                    app:et_supportMode="none"
+                    app:et_dividerColor="@android:color/transparent"
+                    android:textCursorDrawable="@drawable/curson"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    cocoapay:edittextfont="NEXA LIGHT.OTF"
+                    cocoapay:edittextfontHint="NEXA LIGHT.OTF"
+                    android:background="@drawable/edit_bottom_stroke"
+                    android:id="@+id/phone"
+                    android:layout_gravity="right" />
+
+                <com.firebug.scootr.Views.CustomEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textCursorDrawable="@drawable/curson"
+                    android:padding="5dp"
+                    android:textColorHint="#ffffff"
+                    android:textColor="#ffffff"
+                    android:inputType="textCapSentences"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:hint="City"
+                    app:et_labelTextColor="#ffffff"
+                    style="@style/Material.Widget.EditText.Light"
+                    app:et_supportMode="none"
+                    app:et_dividerColor="@android:color/transparent"
+                    cocoapay:edittextfont="NEXA LIGHT.OTF"
+                    cocoapay:edittextfontHint="NEXA LIGHT.OTF"
+                    android:background="@drawable/edit_bottom_stroke"
+                    android:id="@+id/city" />
+
+                <com.firebug.scootr.Views.CustomEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:hint="Password"
+                    android:textColorHint="#ffffff"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:inputType="textPassword"
+                    app:et_labelTextColor="#ffffff"
+                    style="@style/Material.Widget.EditText.Light"
+                    app:et_supportMode="none"
+                    app:et_dividerColor="@android:color/transparent"
+                    android:textCursorDrawable="@drawable/curson"
+                    android:background="@drawable/edit_bottom_stroke"
+                    android:id="@+id/password"
+                    cocoapay:edittextfont="NEXA LIGHT.OTF"
+                    cocoapay:edittextfontHint="NEXA LIGHT.OTF"
+                    android:layout_gravity="center_horizontal" />
+
+                <com.firebug.scootr.Views.CustomEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/con_password"
+                    android:padding="5dp"
+                    android:hint="Confirm Password"
+                    android:layout_marginTop="5dp"
+                    app:et_labelTextColor="#ffffff"
+                    style="@style/Material.Widget.EditText.Light"
+                    app:et_supportMode="none"
+                    app:et_dividerColor="@android:color/transparent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/edit_bottom_stroke"
+                    android:textColorHint="#ffffff"
+                    android:inputType="textPassword"
+                    android:textColor="#ffffff"
+                    cocoapay:edittextfont="NEXA LIGHT.OTF"
+                    android:textCursorDrawable="@drawable/curson"
+                    cocoapay:edittextfontHint="NEXA LIGHT.OTF"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"/>
+            </LinearLayout> </ScrollView>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_lay"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true">
+
+
+        <com.firebug.scootr.Views.MyTextView
+            style="@style/FlatWaveColorButtonRippleStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign Out"
+            app:rd_delayClick="afterRelease"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/btn_sign_up_merchant"
+            android:background="@drawable/button_background"
+            android:textColor="#ffffff"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_marginBottom="10dp"
+            app:edittextfont="NEXA LIGHT.OTF"
+            />
+    </RelativeLayout>
+
+    <com.rey.material.widget.ProgressView
+        android:id="@+id/progress_pv_circular_inout"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center"
+        app:pv_autostart = "false"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        app:pv_circular="true"
+        app:pv_progressStyle="@style/InOutCircularProgressDrawableStyle"
+        app:pv_progressMode="indeterminate"/>
+</RelativeLayout>
