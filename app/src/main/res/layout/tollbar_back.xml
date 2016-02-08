@@ -1,37 +1,35 @@
-<android.support.v7.widget.Toolbar
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-   android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/myPrimaryDarkColor"
-    android:minHeight="55dp" >
+    android:minHeight="55dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <com.firebug.scootr.Views.MyTextView
-            android:textColor="#ffffff"
-            app:edittextfont="NEXA LIGHT.OTF"
-            android:layout_marginLeft="0dp"
-            android:textSize="30dp"
-            android:layout_marginRight="10dp"
-            android:layout_width="match_parent"
-            android:text="Settlements"
-            android:gravity="center"
             android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_height="wrap_content" />
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="Settlements"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            app:edittextfont="NEXA LIGHT.OTF" />
 
         <ImageView
-            android:layout_centerVertical="true"
             android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="@dimen/abc_action_bar_default_height_material"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="-10dp"
             android:scaleType="centerInside"
-            android:src="@drawable/back_button"
-            android:layout_width="50dp"
-            android:layout_height="@dimen/abc_action_bar_default_height_material" />
-
+            android:src="@drawable/back_button" />
 
 
     </RelativeLayout>

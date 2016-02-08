@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:cocoapay="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    android:id="@+id/main_layout"
+    android:layout_height="match_parent">
+
+
+      <include
+          android:id="@+id/toolbar"
+          layout="@layout/tollbar"></include>
+
+
+    <com.firebug.scootr.Views.MyTextView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        app:rd_delayClick="afterRelease"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/profile"
+        android:textColor="#ff5b61"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        app:edittextfont="NEXA LIGHT.OTF"
+        />
+    <View
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/profile"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ff5b61"></View>
+
+    <RelativeLayout
+        android:id="@+id/bottom_lay"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true">
+
+
+        <com.firebug.scootr.Views.MyTextView
+            style="@style/FlatWaveColorButtonRippleStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign Out"
+            app:rd_delayClick="afterRelease"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/sign_out"
+            android:background="@drawable/button_background"
+            android:textColor="#ffffff"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_marginBottom="10dp"
+            app:edittextfont="NEXA LIGHT.OTF"
+            />
+
+    </RelativeLayout>
+
+    <com.rey.material.widget.ProgressView
+        android:id="@+id/progress_pv_circular_inout"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center"
+        app:pv_autostart = "false"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        app:pv_circular="true"
+        app:pv_progressStyle="@style/InOutCircularProgressDrawableStyle"
+        app:pv_progressMode="indeterminate"/>
+</RelativeLayout>

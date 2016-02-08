@@ -130,7 +130,7 @@
             app:edittextfont="NEXA LIGHT.OTF"
             android:layout_margin="5dp"
             android:layout_centerHorizontal="true"
-            android:text="Go Offline"
+            android:text="Go Online"
             android:textColor="@color/text_white" />
 
     </RelativeLayout>
@@ -161,7 +161,8 @@
             android:text="Settings"
             app:edittextfont="NEXA LIGHT.OTF"
             android:textColor="#AAAAAA"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            />
 
     </LinearLayout>
 

@@ -1,110 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="@android:color/transparent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/request_layout"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#71aaaaaa"
+
     >
 
     <com.firebug.scootr.Views.MyTextView
-        app:edittextfont="NEXA LIGHT.OTF"
+        android:id="@+id/distance"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="70"
-        android:background="@drawable/circle_red"
-        android:gravity="center"
-        android:textSize="25sp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:id="@+id/distance"
-        />
+        android:background="@drawable/circle_red"
+        android:gravity="center"
+        android:text="70"
+        android:textSize="25sp"
+        app:edittextfont="NEXA LIGHT.OTF" />
 
 
     <LinearLayout
+        android:id="@+id/ll1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/ll1"
-        android:layout_above="@+id/llTo"
-        >
+        android:layout_above="@+id/llTo">
 
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/homeIcon"
-            android:src="@drawable/pick"
-            android:layout_gravity="center_horizontal"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true"
-            android:layout_margin="10dp"
-            />
-        <com.firebug.scootr.Views.MyTextView
-            app:edittextfont="NEXA LIGHT.OTF"
-
-            android:id="@+id/addressSource"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:text="#562 Koramamgla Main Road, \n 1st Block Koramamgla, \n Banglore, 560064 "
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:src="@drawable/pick" />
+
+        <com.firebug.scootr.Views.MyTextView
+            android:id="@+id/addressSource"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="7dp"
+            android:text="#562 Koramamgla Main Road, \n 1st Block Koramamgla, \n Banglore, 560064 "
+            android:textSize="16sp"
+            app:edittextfont="NEXA LIGHT.OTF"
 
 
             />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/llTo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/ll2"
-        android:id="@+id/llTo"
-        android:layout_marginTop="3dp"
         android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
 
         >
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="to"
             android:gravity="center"
-            android:textSize="20sp"
-            />
+            android:text="to"
+            android:textSize="20sp" />
 
 
     </LinearLayout>
 
 
     <LinearLayout
+        android:id="@+id/ll2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/ll2"
-        android:layout_above="@+id/footer"
-        >
+        android:layout_above="@+id/footer">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/flagIcon"
-            android:src="@drawable/drop"
-            android:layout_gravity="center_horizontal"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true"
-            android:layout_margin="10dp"
-             />
-        <com.firebug.scootr.Views.MyTextView
-            app:edittextfont="NEXA LIGHT.OTF"
-
-            android:id="@+id/addressDestination"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:text="#16 Byrappa Gardens, \n Ramchandrapura, Jalhali Post \n Banglore, 560072 "
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:src="@drawable/drop" />
+
+        <com.firebug.scootr.Views.MyTextView
+            android:id="@+id/addressDestination"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="7dp"
+            android:text="#16 Byrappa Gardens, \n Ramchandrapura, Jalhali Post \n Banglore, 560072 "
+            android:textSize="16sp"
+            app:edittextfont="NEXA LIGHT.OTF"
 
 
-             />
-        </LinearLayout>
+            />
+    </LinearLayout>
 
 
     <LinearLayout
@@ -113,20 +115,20 @@
         android:layout_height="40dp"
         android:layout_alignParentBottom="true"
         android:background="#444444"
-        android:orientation="horizontal"
-        >
-        <com.firebug.scootr.Views.MyTextView
-            app:edittextfont="NEXA LIGHT.OTF"
+        android:orientation="horizontal">
 
+        <com.firebug.scootr.Views.MyTextView
             android:layout_width="wrap_content"
+            android:id="@+id/cancel"
+
             android:layout_height="wrap_content"
-            android:text="Cancel"
+            android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:gravity="center"
-            android:layout_gravity="center_vertical"
+            android:text="Cancel"
             android:textColor="#ffffff"
             android:textSize="22sp"
-            />
+            app:edittextfont="NEXA LIGHT.OTF" />
 
         <ImageView
             android:layout_width="1dp"
@@ -134,20 +136,18 @@
             android:background="#ffffff"
 
             />
-        <com.firebug.scootr.Views.MyTextView
-            app:edittextfont="NEXA LIGHT.OTF"
 
+        <com.firebug.scootr.Views.MyTextView
+            android:id="@+id/confirm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Confirm"
-            android:textSize="22sp"
+            android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:gravity="center"
-            android:layout_gravity="center_vertical"
+            android:text="Confirm"
             android:textColor="#ffffff"
-            />
-
-
+            android:textSize="22sp"
+            app:edittextfont="NEXA LIGHT.OTF" />
 
     </LinearLayout>
 </RelativeLayout>

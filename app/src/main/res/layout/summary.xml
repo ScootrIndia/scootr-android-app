@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/summary_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:background="#FFFFFF"
+    android:visibility="gone">
 
+    <!--android:background="@drawable/bill"-->
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
@@ -14,9 +17,8 @@
         android:layout_marginTop="12dp"
         android:text="Summary"
         android:textColor="#000000"
-        android:textSize="35dp"
-        android:textStyle="bold"
-         />
+        android:textSize="25dp"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -34,11 +36,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView4"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:text="86"
         android:textColor="#00B100"
-        android:textSize="45dp"
-         />
+        android:textSize="30dp" />
 
     <TextView
         android:id="@+id/textView14"
@@ -50,8 +51,7 @@
         android:layout_marginTop="5dp"
         android:text="Distance Travelled :"
         android:textColor="#000000"
-        android:textSize="16dp"
-         />
+        android:textSize="16dp" />
 
     <TextView
         android:id="@+id/textView15"
@@ -62,8 +62,7 @@
         android:layout_toRightOf="@+id/textView14"
         android:text="4.8 KM"
         android:textColor="#000000"
-        android:textSize="16dp"
-        />
+        android:textSize="16dp" />
 
     <TextView
         android:id="@+id/textView16"
@@ -75,8 +74,7 @@
         android:paddingTop="5dp"
         android:text="Duration :"
         android:textColor="#000000"
-        android:textSize="16dp"
-         />
+        android:textSize="16dp" />
 
     <TextView
         android:id="@+id/textView17"
@@ -87,16 +85,15 @@
         android:layout_toRightOf="@+id/textView16"
         android:text="12 Minutes 28 Seconds"
         android:textColor="#000000"
-        android:textSize="16dp"
-         />
+        android:textSize="16dp" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_alignEnd="@+id/imageView4"
+        android:layout_height="150dp"
+        android:layout_alignEnd="@+id/textView17"
         android:layout_alignLeft="@+id/textView14"
-        android:layout_alignRight="@+id/imageView4"
+        android:layout_alignRight="@+id/textView17"
         android:layout_alignStart="@+id/textView14"
         android:layout_centerVertical="true"
         android:background="#aaaaaa" />
@@ -114,20 +111,20 @@
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/finalto"
         android:layout_alignTop="@+id/imageView8"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/finalto" />
 
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/finaldrop"
         android:layout_above="@+id/textView18"
+        android:layout_toEndOf="@+id/textView12"
         android:layout_toRightOf="@+id/textView12"
-        android:layout_toEndOf="@+id/textView12" />
+        android:background="@drawable/finaldrop" />
 
     <TextView
         android:id="@+id/textView18"
@@ -158,40 +155,86 @@
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="20sp"
-        android:text="@string/atherate"
-        android:layout_below="@+id/textView18"
         android:layout_alignLeft="@+id/imageView5"
-        android:layout_alignStart="@+id/imageView5" />
+        android:layout_alignStart="@+id/imageView5"
+        android:layout_below="@+id/textView18"
+        android:paddingLeft="20sp"
+        android:text="@string/atherate" />
 
     <TextView
+        android:id="@+id/textView21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/atherate"
-        android:id="@+id/textView21"
-
         android:layout_below="@+id/textView19"
-        android:layout_toRightOf="@+id/imageView7"
-        android:layout_toEndOf="@+id/imageView7" />
 
-    <LinearLayout android:layout_width="match_parent"
+        android:layout_toEndOf="@+id/imageView7"
+        android:layout_toRightOf="@+id/imageView7"
+        android:text="@string/atherate" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="36dp">
+        android:layout_marginBottom="71dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="8dp"
+        android:padding="2dp">
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="562, Koramangla Main Road \n 1st Block, Banglore - 560064 "
-            android:layout_marginLeft="7dp"
-            />
+            android:layout_marginLeft="24dp"
+            android:layout_weight="1"
+            android:text="562, Koramangla Main Road \n1st Block, Banglore - 560064 "
+            android:textSize="12sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="423, Koramangla Main Road \n 3rd Block, Banglore - 560064 "
-            android:layout_marginLeft="7dp"
-            />
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:text="423, Koramangla Main Road \n3rd Block, Banglore - 560064 "
+            android:textSize="12sp" />
 
     </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/imageView5"
+        android:layout_alignLeft="@+id/textView20"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/imageView5"
+        android:layout_alignStart="@+id/textView20"
+        android:layout_marginBottom="10dp"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <com.firebug.scootr.Views.MyTextView
+            android:id="@+id/sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sign_in"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginRight="0.5dp"
+            android:layout_marginTop="2dp"
+            android:background="#ff5b61"
+            android:gravity="center"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:text="Close"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ffffff"
+            app:edittextfont="NEXA LIGHT.OTF"
+            app:rd_delayClick="afterRelease" />
+
+
+    </LinearLayout>
+
 </RelativeLayout>

@@ -1,40 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/arrived_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#567345"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:visibility="visible">
+    <fragment
+        android:id="@+id/map_google"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <include
-        layout="@layout/custom_alert"
+        layout="@layout/address_alert"
         android:layout_width="340dp"
-        android:layout_height="165dp"
+        android:layout_height="110dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="103dp" />
+        android:layout_marginBottom="70dp" />
 
     <include
+        layout="@layout/label_time"
         android:layout_width="250dp"
         android:layout_height="40dp"
-        layout="@layout/label_time"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
 
     <com.firebug.scootr.Views.MyTextView
-        android:layout_marginBottom="20dp"
-        android:layout_alignParentBottom="true"
+
+        android:id="@+id/rider_end_delivery"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:id="@+id/signUpTv"
-        android:text="End Delivery"
-        app:edittextfont="NEXA LIGHT.OTF"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
         android:layout_marginTop="20dp"
-        android:textColor="@color/text_white"
-        android:gravity="center"
-        android:textSize="20sp"
         android:background="@drawable/outline_bg_white_dark"
-        />
+        android:gravity="center"
+        android:text="Arrived"
+        android:textColor="@color/text_white"
+        android:textSize="20sp"
+        app:edittextfont="NEXA LIGHT.OTF" />
 
 
 </RelativeLayout>

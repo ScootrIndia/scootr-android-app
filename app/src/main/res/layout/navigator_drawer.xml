@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="start"
-    android:background="#FFFFFF">
+    android:background="#FFFFFF"
+    >
 
     <RelativeLayout
         android:id="@+id/topPanel"
@@ -132,7 +133,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:text="Go Offline"
+            android:text="Go Online"
             android:textColor="@color/text_white"
             android:textSize="17dp" />
     </RelativeLayout>

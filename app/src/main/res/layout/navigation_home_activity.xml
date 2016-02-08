@@ -6,15 +6,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:fitsSystemWindows="true"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#738080"
+    android:fitsSystemWindows="true">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <include android:id="@+id/toolbar_actionbar"
+        <include
+            android:id="@+id/toolbar_actionbar"
             layout="@layout/tollbar_main"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -30,12 +32,49 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:background="#ffffff"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#ffffff">
 
+            <fragment
+                android:id="@+id/map_google"
+                android:name="com.google.android.gms.maps.MapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
+            <!-- first page-->
             <include layout="@layout/offline_driver"></include>
 
+            <RelativeLayout
+                android:id="@+id/main_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- need to edit here-->
+
+                <include layout="@layout/location_address"></include>
+<!--
+
+                <include
+
+                    layout="@layout/arrvied"></include>
+-->
+
+
+               <!-- <include layout="@layout/start_delivery"></include>-->
+
+
+                <!--<include
+
+                    layout="@layout/end_delivery"></include>-->
+                <!--<include
+
+                    layout="@layout/end_delevery2"></include>
+-->
+
+               <!-- <include layout="@layout/summary"></include>
+
+               <include layout="@layout/summary2"></include>-->
+        </RelativeLayout>
         </RelativeLayout>
 
     </LinearLayout>

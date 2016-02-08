@@ -1,60 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#fff"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff">
 
-     >
     <com.firebug.scootr.Views.MyTextView
-        app:edittextfont="NEXA LIGHT.OTF"
         android:id="@+id/orderTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Order ID: V91LY10"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true" 
         android:layout_margin="9dp"
-        android:textSize="16sp"/>
-    
+        android:text="Order ID: V91LY10"
+        android:textSize="16sp"
+        app:edittextfont="NEXA LIGHT.OTF" />
+
     <ImageView
         android:id="@+id/imgId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/info"
         android:layout_alignParentRight="true"
         android:layout_margin="7dp"
-        />
-    
+        android:src="@drawable/info" />
+
     <LinearLayout
+        android:id="@+id/firstLL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/firstLL"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/orderTv"
-        android:layout_margin="9dp">
-    <ImageView
-        android:id="@+id/settingImg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-       
-        android:src="@drawable/settlin"
-        android:layout_gravity="center_vertical"
-        
-         />
-    
-    <com.firebug.scootr.Views.MyTextView
-        app:edittextfont="NEXA LIGHT.OTF"
+        android:layout_marginLeft="7dp">
 
-        android:id="@+id/rsTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Rs 145"
-        android:layout_marginLeft="7dp"
-        
-        android:layout_gravity="center_vertical"        
-        />
-    
+        <ImageView
+            android:id="@+id/settingImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/settlin" />
+
+        <com.firebug.scootr.Views.MyTextView
+            android:id="@+id/rsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="7dp"
+            android:text="Rs 145"
+            app:edittextfont="NEXA LIGHT.OTF" />
+
     </LinearLayout>
+
+
 
 </RelativeLayout>
