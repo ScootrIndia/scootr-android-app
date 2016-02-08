@@ -3,6 +3,7 @@ package com.firebug.scootr;
 import android.content.Context;
 import android.content.Intent;
 import android.location.LocationManager;
+import android.os.AsyncTask;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -17,6 +18,8 @@ import android.widget.RelativeLayout;
 
 import com.firebug.scootr.Views.MyTextView;
 import com.firebug.scootr.utility.GPSTracker;
+import com.firebug.scootr.utility.RestClient;
+import com.firebug.scootr.utility.Utility;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -24,7 +27,7 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-<<<<<<< HEAD
+
 import com.google.android.gms.vision.barcode.Barcode;
 
 import org.apache.http.HttpResponse;
@@ -44,9 +47,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Handler;
 
-=======
 
->>>>>>> bec269e0751e446bc61478725c8214a2a32a4d0c
 public class NavigationHome extends AppCompatActivity implements View.OnClickListener {
 
     DrawerLayout drawerLayout;
@@ -55,7 +56,7 @@ public class NavigationHome extends AppCompatActivity implements View.OnClickLis
     private boolean isNetworkEnabled = false;
     private LocationManager locationManager;
     private boolean isGPSEnabled = false;
-    double lat = 0, lng = 0;
+    double lat = 0.0, lng =0.0;
     Context context;
     GPSTracker gps;
 
@@ -65,6 +66,7 @@ public class NavigationHome extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.navigation_home_activity);
         context = this;
         init();
+
 
     }
 
@@ -79,13 +81,12 @@ public class NavigationHome extends AppCompatActivity implements View.OnClickLis
         ((LinearLayout) findViewById(R.id.support_layout)).setOnClickListener(this);
         ((RelativeLayout) findViewById(R.id.go_offline_layout)).setOnClickListener(this);
         ((MyTextView) findViewById(R.id.go_online)).setOnClickListener(this);
-<<<<<<< HEAD
-=======
+
         ((MyTextView) findViewById(R.id.confirm)).setOnClickListener(this);
         ((MyTextView) findViewById(R.id.rider_end_delivery)).setOnClickListener(this);
         ((MyTextView) findViewById(R.id.state_ride)).setOnClickListener(this);
         ((MyTextView) findViewById(R.id.merchant_end_ride)).setOnClickListener(this);
->>>>>>> bec269e0751e446bc61478725c8214a2a32a4d0c
+
 
         gps = new GPSTracker(context);
 
@@ -104,49 +105,48 @@ public class NavigationHome extends AppCompatActivity implements View.OnClickLis
         showMyLocationMap();
 
     }
-<<<<<<< HEAD
 
-    public void showMyLocationMap() {
-
-        if (Getlocation()) {
-=======
 
     public void showMyLocationMap() {
 
         if (Getlocation()) {
 
-            GoogleMap googleMap;
-            googleMap = ((MapFragment) getFragmentManager().findFragmentById(R.id.map_google)).getMap();
+            public void showMyLocationMap () {
 
-            try {
-                final LatLng TutorialsPoint = new LatLng(lat, lng);
-                googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-                googleMap.addMarker(new MarkerOptions().position(TutorialsPoint).title("Scootr Point 1")).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.scootr_map));
-                googleMap.getUiSettings().setZoomGesturesEnabled(true);
-                CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(TutorialsPoint, 10);
-                googleMap.animateCamera(cameraUpdate);
-            } catch (Exception e) {
-                e.printStackTrace();
+                if (Getlocation()) {
+
+                    GoogleMap googleMap;
+                    googleMap = ((MapFragment) getFragmentManager().findFragmentById(R.id.map_google)).getMap();
+
+                    try {
+                        final LatLng TutorialsPoint = new LatLng(lat, lng);
+                        googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                        googleMap.addMarker(new MarkerOptions().position(TutorialsPoint).title("Scootr Point 1")).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.scootr_map));
+                        googleMap.getUiSettings().setZoomGesturesEnabled(true);
+                        CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(TutorialsPoint, 10);
+                        googleMap.animateCamera(cameraUpdate);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+
+                }
+
+
+                GoogleMap googleMap;
+                googleMap = ((MapFragment) getFragmentManager().findFragmentById(R.id.map_google)).getMap();
+                try {
+                    final LatLng TutorialsPoint = new LatLng(lat, lng);
+                    googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                    googleMap.addMarker(new MarkerOptions().position(TutorialsPoint).title("Scootr Point 1")).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.scootr_map));
+                    googleMap.getUiSettings().setZoomGesturesEnabled(true);
+                    CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(TutorialsPoint, 12);
+                    googleMap.animateCamera(cameraUpdate);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
-
-
         }
->>>>>>> bec269e0751e446bc61478725c8214a2a32a4d0c
-
-            GoogleMap googleMap;
-            googleMap = ((MapFragment) getFragmentManager().findFragmentById(R.id.map_google)).getMap();
-            try {
-                final LatLng TutorialsPoint = new LatLng(lat, lng);
-                googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-                googleMap.addMarker(new MarkerOptions().position(TutorialsPoint).title("Scootr Point 1")).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.scootr_map));
-                googleMap.getUiSettings().setZoomGesturesEnabled(true);
-                CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(TutorialsPoint, 12);
-                googleMap.animateCamera(cameraUpdate);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }
 
     public void openLeft() {
         if (drawerLayout.isDrawerOpen(Gravity.LEFT)) {
@@ -171,7 +171,6 @@ public class NavigationHome extends AppCompatActivity implements View.OnClickLis
             lat = (new GPSTracker(context).getLatitude());
             lng = (new GPSTracker(context).getLongitude());
             System.out.println("value of lat and long " + lat + ":" + lng);
-
             return true;
 
 
@@ -200,15 +199,14 @@ public class NavigationHome extends AppCompatActivity implements View.OnClickLis
             go_offline = false;
             ((RelativeLayout) findViewById(R.id.offline_scootr)).setVisibility(View.GONE);
             ((RelativeLayout) findViewById(R.id.main_layout)).setVisibility(View.VISIBLE);
-<<<<<<< HEAD
+
         } else if (v.getId() == R.id.rider_end_delivery) {
-=======
         } else if (v.getId() == R.id.confirm) {
             ((RelativeLayout) findViewById(R.id.request_layout)).setVisibility(View.GONE);
             ((RelativeLayout) findViewById(R.id.arrived_layout)).setVisibility(View.VISIBLE);
 
-        }else if (v.getId() == R.id.rider_end_delivery) {
->>>>>>> bec269e0751e446bc61478725c8214a2a32a4d0c
+        } else if (v.getId() == R.id.rider_end_delivery) {
+
             ((RelativeLayout) findViewById(R.id.arrived_layout)).setVisibility(View.GONE);
             ((RelativeLayout) findViewById(R.id.start_ride_layout)).setVisibility(View.VISIBLE);
 
@@ -216,7 +214,6 @@ public class NavigationHome extends AppCompatActivity implements View.OnClickLis
             ((RelativeLayout) findViewById(R.id.start_ride_layout)).setVisibility(View.GONE);
             ((RelativeLayout) findViewById(R.id.merchant_end_delivery_layout)).setVisibility(View.VISIBLE);
 
-<<<<<<< HEAD
         }
         // need  to sumup
         else if (v.getId() == R.id.merchant_end_ride) {
@@ -226,13 +223,10 @@ public class NavigationHome extends AppCompatActivity implements View.OnClickLis
             ((RelativeLayout) findViewById(R.id.summary_layout)).setVisibility(View.GONE);
             ((RelativeLayout) findViewById(R.id.request_layout)).setVisibility(View.VISIBLE);
 
-=======
->>>>>>> bec269e0751e446bc61478725c8214a2a32a4d0c
         } else if (v.getId() == R.id.merchant_end_ride) {
             ((RelativeLayout) findViewById(R.id.merchant_end_delivery_layout)).setVisibility(View.GONE);
             ((RelativeLayout) findViewById(R.id.summary_layout)).setVisibility(View.VISIBLE);
 
-<<<<<<< HEAD
         } else if (v.getId() == R.id.setting_layout) {
             openLeft();
             startActivity(new Intent(NavigationHome.this, Settings.class));
@@ -351,5 +345,32 @@ public class NavigationHome extends AppCompatActivity implements View.OnClickLis
     }
 */
 
+
+
+    class GetLocation extends AsyncTask<Void, Void, Void>{
+
+        String weserviceResposnse;
+        @Override
+        protected Void doInBackground(Void... params) {
+         //   Utility  ui=new Utility();
+            RestClient restClient=new RestClient();
+            weserviceResposnse=restClient.ExecutePostJSON().;
+
+
+
+            return null;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+        }
+
+    }
 
 }
