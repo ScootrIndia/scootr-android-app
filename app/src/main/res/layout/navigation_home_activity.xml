@@ -6,15 +6,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-<<<<<<< HEAD
     android:layout_height="match_parent"
     android:background="#738080"
     android:fitsSystemWindows="true">
-=======
-    android:background="#73808080"
-    android:fitsSystemWindows="true"
-    android:layout_height="match_parent">
->>>>>>> 14c30558053d3c5a75e0ec0e57f6c697ef356325
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -45,11 +39,7 @@
                 android:id="@+id/map_google"
                 android:name="com.google.android.gms.maps.MapFragment"
                 android:layout_width="match_parent"
-<<<<<<< HEAD
                 android:layout_height="match_parent" />
-=======
-                android:layout_height="match_parent"/>
->>>>>>> 14c30558053d3c5a75e0ec0e57f6c697ef356325
 
             <!-- first page-->
             <include layout="@layout/offline_driver"></include>
@@ -59,7 +49,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-<<<<<<< HEAD
                 <!-- need to edit here-->
 
                 <include layout="@layout/location_address"></include>
@@ -86,21 +75,6 @@
 
                <include layout="@layout/summary2"></include>-->
         </RelativeLayout>
-=======
-            <include layout="@layout/location_address"></include>
-                <include layout="@layout/arrvied"></include>
-            <include layout="@layout/start_delivery"></include>
-                <include layout="@layout/end_delivery"></include>
-<<<<<<< HEAD
-
-            <!--<include layout="@layout/summary"></include>-->
-=======
-            <include layout="@layout/summary"></include>
->>>>>>> bec269e0751e446bc61478725c8214a2a32a4d0c
-
-            </RelativeLayout>
-
->>>>>>> 14c30558053d3c5a75e0ec0e57f6c697ef356325
         </RelativeLayout>
 
     </LinearLayout>

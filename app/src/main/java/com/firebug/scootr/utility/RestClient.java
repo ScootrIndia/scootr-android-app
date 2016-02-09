@@ -63,10 +63,7 @@ public class RestClient {
 	    }
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 14c30558053d3c5a75e0ec0e57f6c697ef356325
 	    public void AddParam(String name, String value)
 	    {
 	        params.add(new BasicNameValuePair(name, value));

@@ -26,11 +26,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:layout_gravity="center_horizontal"
-<<<<<<< HEAD
                 android:text="Update Profile"
-=======
-                android:text="Edit Profile"
->>>>>>> 14c30558053d3c5a75e0ec0e57f6c697ef356325
                 android:textColor="#ffffff"
                 android:textSize="30dp" />
 
@@ -197,7 +193,6 @@
         android:layout_height="120dp"
         android:layout_alignParentBottom="true">
 
-<<<<<<< HEAD
         <com.firebug.scootr.Views.MyTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -223,29 +218,18 @@
             android:textColor="#ffffff"
             android:gravity="center"
             app:edittextfont="NEXA LIGHT.OTF"/>
-=======
-
->>>>>>> 14c30558053d3c5a75e0ec0e57f6c697ef356325
 
 
         <com.firebug.scootr.Views.MyTextView
             style="@style/FlatWaveColorButtonRippleStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-<<<<<<< HEAD
             android:text="Update"
-=======
-            android:text="Edit Profile"
->>>>>>> 14c30558053d3c5a75e0ec0e57f6c697ef356325
             app:rd_delayClick="afterRelease"
             android:gravity="center"
             android:layout_alignParentBottom="true"
             android:textAppearance="?android:attr/textAppearanceLarge"
-<<<<<<< HEAD
             android:id="@+id/btn_sign_up_merchant"
-=======
-            android:id="@+id/btn_edit_merchant"
->>>>>>> 14c30558053d3c5a75e0ec0e57f6c697ef356325
             android:background="@drawable/button_background"
             android:textColor="#ffffff"
             android:paddingTop="4dp"

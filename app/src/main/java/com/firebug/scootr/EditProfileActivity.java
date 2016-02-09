@@ -1,6 +1,5 @@
 package com.firebug.scootr;
 
-<<<<<<< HEAD
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -136,26 +135,11 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
         DialogFragment fragment = DialogFragment.newInstance(builder);
        fragment.show(getSupportFragmentManager(), null);*/
 
-=======
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-
-public class EditProfileActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.edit_profile);
->>>>>>> 14c30558053d3c5a75e0ec0e57f6c697ef356325
     }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-<<<<<<< HEAD
         startActivity(new Intent(appContext, SignInActivity.class));
         finish();
     }
@@ -279,33 +263,4 @@ public class EditProfileActivity extends AppCompatActivity {
 
     }
 
-=======
-
-        Intent ii = new Intent(EditProfileActivity.this, Settings.class);
-        startActivity(ii);
-
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_edit_profile, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
->>>>>>> 14c30558053d3c5a75e0ec0e57f6c697ef356325
 }
