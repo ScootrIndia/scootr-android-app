@@ -13,7 +13,10 @@ import java.util.LinkedList;
 public class Constant {
 
     public static final String BASE_URL_RIDE = "https://scootr.herokuapp.com/api/rider/";
+<<<<<<< HEAD
     public static final String BASE_URL_RIDE_S = "https://scootr.herokuapp.com/api/rides/";
+=======
+>>>>>>> 14c30558053d3c5a75e0ec0e57f6c697ef356325
 
 
 
@@ -25,8 +28,11 @@ public class Constant {
     public static final String USER_EMAIL = "user_email";
     public static final String CITY = "city";
     public static final String is_login = "is_login";
+<<<<<<< HEAD
     public static final String is_services_ON = "is_services_ON";
     public static final String ride_done_status = "ride_done_status";
+=======
+>>>>>>> 14c30558053d3c5a75e0ec0e57f6c697ef356325
 
     public static final String Access_Token ="access_token";
 

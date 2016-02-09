@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/request_layout"
     android:visibility="gone"
@@ -8,6 +9,12 @@
 
     android:background="#71aaaaaa"
 
+=======
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#71aaaaaa"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/request_layout"
+>>>>>>> 14c30558053d3c5a75e0ec0e57f6c697ef356325
     >
 
     <com.firebug.scootr.Views.MyTextView
@@ -136,8 +143,13 @@
             android:background="#ffffff"
 
             />
+<<<<<<< HEAD
 
         <com.firebug.scootr.Views.MyTextView
+=======
+        <com.firebug.scootr.Views.MyTextView
+            app:edittextfont="NEXA LIGHT.OTF"
+>>>>>>> 14c30558053d3c5a75e0ec0e57f6c697ef356325
             android:id="@+id/confirm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

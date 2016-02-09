@@ -3,9 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/summary_layout"
     android:layout_width="match_parent"
+    android:visibility="gone"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:background="#FFFFFF"
     android:visibility="gone">
+=======
+<<<<<<< HEAD
+    android:background="@drawable/bill"
+    android:visibility="visible"
+    android:id="@+id/summary_layout"
+=======
+    android:id="@+id/summary_layout"
+    android:background="@drawable/bill"
+>>>>>>> bec269e0751e446bc61478725c8214a2a32a4d0c
+    >
+>>>>>>> 14c30558053d3c5a75e0ec0e57f6c697ef356325
 
     <!--android:background="@drawable/bill"-->
     <TextView
@@ -17,7 +30,11 @@
         android:layout_marginTop="12dp"
         android:text="Summary"
         android:textColor="#000000"
+<<<<<<< HEAD
         android:textSize="25dp"
+=======
+        android:textSize="35dp"
+>>>>>>> 14c30558053d3c5a75e0ec0e57f6c697ef356325
         android:textStyle="bold" />
 
     <ImageView
@@ -39,7 +56,11 @@
         android:layout_marginTop="5dp"
         android:text="86"
         android:textColor="#00B100"
+<<<<<<< HEAD
         android:textSize="30dp" />
+=======
+        android:textSize="45dp" />
+>>>>>>> 14c30558053d3c5a75e0ec0e57f6c697ef356325
 
     <TextView
         android:id="@+id/textView14"
@@ -91,7 +112,11 @@
         android:id="@+id/imageView5"
         android:layout_width="match_parent"
         android:layout_height="150dp"
+<<<<<<< HEAD
         android:layout_alignEnd="@+id/textView17"
+=======
+        android:layout_alignEnd="@+id/imageView4"
+>>>>>>> 14c30558053d3c5a75e0ec0e57f6c697ef356325
         android:layout_alignLeft="@+id/textView14"
         android:layout_alignRight="@+id/textView17"
         android:layout_alignStart="@+id/textView14"
@@ -197,6 +222,7 @@
             android:layout_weight="1"
             android:text="423, Koramangla Main Road \n3rd Block, Banglore - 560064 "
             android:textSize="12sp" />
+<<<<<<< HEAD
 
     </LinearLayout>
 
@@ -237,4 +263,46 @@
 
     </LinearLayout>
 
+=======
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_alignRight="@+id/imageView5"
+        android:layout_alignEnd="@+id/imageView5"
+        android:layout_alignLeft="@+id/textView20"
+        android:layout_alignStart="@+id/textView20">
+
+        <com.firebug.scootr.Views.MyTextView
+            android:id="@+id/sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sign_in"
+            android:layout_marginBottom="2dp"
+            android:layout_marginRight="0.5dp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginTop="2dp"
+            android:background="#ff5b61"
+            android:gravity="center"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:text="Close"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ffffff"
+            app:edittextfont="NEXA LIGHT.OTF"
+            app:rd_delayClick="afterRelease" />
+
+
+    </LinearLayout>
+
+>>>>>>> 14c30558053d3c5a75e0ec0e57f6c697ef356325
 </RelativeLayout>

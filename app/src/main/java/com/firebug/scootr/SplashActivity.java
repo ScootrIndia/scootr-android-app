@@ -20,8 +20,11 @@ public class SplashActivity extends Activity {
             @Override
             public void run() {
 
+<<<<<<< HEAD
                 Utility.setSharedPreference(SplashActivity.this,Constant.is_services_ON,"no");
 
+=======
+>>>>>>> 14c30558053d3c5a75e0ec0e57f6c697ef356325
 
                 if(Utility.getSharedPreferences(SplashActivity.this, Constant.is_login).equalsIgnoreCase("yes")) {
                     Intent i = new Intent(SplashActivity.this, NavigationHome.class);

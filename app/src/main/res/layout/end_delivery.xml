@@ -5,6 +5,7 @@
     android:id="@+id/merchant_end_delivery_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:background="@android:color/transparent"
     android:orientation="vertical"
     android:visibility="visible">
@@ -18,6 +19,26 @@
 
     <include
         layout="@layout/end_delivery_a" />
+=======
+<<<<<<< HEAD
+    android:visibility="visible"
+=======
+    android:visibility="gone"
+>>>>>>> bec269e0751e446bc61478725c8214a2a32a4d0c
+    android:background="@android:color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/merchant_end_delivery_layout"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/address_alert"
+        android:layout_width="340dp"
+        android:layout_height="110dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
+         />
+>>>>>>> 14c30558053d3c5a75e0ec0e57f6c697ef356325
 
     <include
         layout="@layout/label_time"
@@ -32,8 +53,13 @@
 
         android:layout_width="match_parent"
         android:layout_height="40dp"
+<<<<<<< HEAD
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20dp"
+=======
+        android:id="@+id/merchant_end_ride"
+        android:text="End Delivery"
+>>>>>>> 14c30558053d3c5a75e0ec0e57f6c697ef356325
         android:layout_marginTop="20dp"
         android:background="@drawable/outline_bg_white_dark"
         android:gravity="center"
